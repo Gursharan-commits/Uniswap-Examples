@@ -48,72 +48,70 @@ describe("LiquidityExamples", () => {
     await usdc.connect(usdcWhale).transfer(accounts[1].address, usdcAmount)
   })
 
-  // it("receive ERC20 tokens", async () => {
-  //   const daiAmount = 100n * 10n ** 18n
-  //   const usdcAmount = 100n * 10n ** 6n
+  it("receive ERC20 tokens", async () => {
+    const daiAmount = 100n * 10n ** 18n
+    const usdcAmount = 100n * 10n ** 6n
 
-  //   console.log(
-  //     "DAI balance before add liquidity",
-  //     await dai.balanceOf(accounts[1].address)
-  //   )
-  //   console.log(
-  //     "USDC balance before add liquidity",
-  //     await usdc.balanceOf(accounts[1].address))
+    console.log(
+      "DAI balance before add liquidity",
+      await dai.balanceOf(accounts[1].address)
+    )
+    console.log(
+      "USDC balance before add liquidity",
+      await usdc.balanceOf(accounts[1].address))
 
-  //   console.log(
-  //     "DAI balance of liquidity example before add liquidity",
-  //     await dai.balanceOf(liquidityExamples.address))
+    console.log(
+      "DAI balance of liquidity example before add liquidity",
+      await dai.balanceOf(liquidityExamples.address))
 
-  //   console.log(
-  //     "USDC balance of liquidity example before add liquidity",
-  //     await usdc.balanceOf(liquidityExamples.address))
+    console.log(
+      "USDC balance of liquidity example before add liquidity",
+      await usdc.balanceOf(liquidityExamples.address))
 
-  //   //connect to account and transfer tokens to the liquidity examples contract, for DAI as well as USDC
-  //   await dai.connect(accounts[1]).transfer(liquidityExamples.address, daiAmount)
-  //   await usdc.connect(accounts[1]).transfer(liquidityExamples.address, usdcAmount)
-
-
-  //   // await liquidityExamples.mintNewPosition()
-
-  //   console.log(
-  //     "DAI balance after add liquidity",
-  //     await dai.balanceOf(accounts[1].address)
-  //   )
-  //   console.log(
-  //     "USDC balance after add liquidity",
-  //     await usdc.balanceOf(accounts[1].address))
-  //   console.log(
-  //     "DAI balance of liquidity example after add liquidity",
-  //     await dai.balanceOf(liquidityExamples.address))
+    //connect to account and transfer tokens to the liquidity examples contract, for DAI as well as USDC
+    await dai.connect(accounts[1]).transfer(liquidityExamples.address, daiAmount)
+    await usdc.connect(accounts[1]).transfer(liquidityExamples.address, usdcAmount)
 
 
-  //   console.log(
-  //     "USDC balance of liquidity example after add liquidity",
-  //     await usdc.balanceOf(liquidityExamples.address))
-  // })
+    // await liquidityExamples.mintNewPosition()
+
+    console.log(
+      "DAI balance after add liquidity",
+      await dai.balanceOf(accounts[1].address))
+    console.log(
+      "USDC balance after add liquidity",
+      await usdc.balanceOf(accounts[1].address))
+    console.log(
+      "DAI balance of liquidity example after add liquidity",
+      await dai.balanceOf(liquidityExamples.address))
+    console.log(
+      "USDC balance of liquidity example after add liquidity",
+      await usdc.balanceOf(liquidityExamples.address))
+  })
 
 
-  // it("mintNewTokens", async () => {
-  //   const daiAmount = 100n * 10n ** 18n
-  //   const usdcAmount = 100n * 10n ** 6n
+  it("mintNewTokens", async () => {
+    const daiAmount = 100n * 10n ** 18n
+    const usdcAmount = 100n * 10n ** 6n
 
-  //   //connect to account and transfer tokens to the liquidity examples contract, for DAI as well as USDC
-  //   //we are  transferring 
-  //   await dai.connect(accounts[1]).transfer(liquidityExamples.address, daiAmount)
-  //   await usdc.connect(accounts[1]).transfer(liquidityExamples.address, usdcAmount)
+    //connect to account and transfer tokens to the liquidity examples contract, for DAI as well as USDC
+    //we are  transferring 
+    await dai.connect(accounts[1]).transfer(liquidityExamples.address, daiAmount)
+    await usdc.connect(accounts[1]).transfer(liquidityExamples.address, usdcAmount)
 
 
-  //   await liquidityExamples.mintNewPosition()
+    await liquidityExamples.mintNewPosition()
 
-  //   console.log(
-  //     "DAI balance after add liquidity",
-  //     await dai.balanceOf(accounts[1].address)
-  //   )
-  //   console.log(
-  //     "USDC balance after add liquidity",
-  //     await usdc.balanceOf(accounts[1].address))
-  // })
+    console.log(
+      "DAI balance after add liquidity",
+      await dai.balanceOf(accounts[1].address)
+    )
+    console.log(
+      "USDC balance after add liquidity",
+      await usdc.balanceOf(accounts[1].address))
+  })
 
+  ///@TO-DO finish the test script for fee collection
   it("collectsFees", async () => {
     const daiAmount = 100n * 10n ** 18n
     const usdcAmount = 100n * 10n ** 6n
