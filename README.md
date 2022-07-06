@@ -10,7 +10,7 @@ This project demonstrates a UniswapV3 examples:
 2. Liquidity Examples
   <ol>
     <li> Liquidity Mining </li>
-   <ol>
+  </ol>
 
      
 Tests scripts for various units of the code using hardhat framework:
